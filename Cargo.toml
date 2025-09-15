@@ -3,8 +3,18 @@ name = "supply_lines"
 version = "0.1.0"
 edition = "2024"
 
-[dependencies]
+[workspace]
+members = [
+    "crates/*"
+]
+resolver = "2"
+
+[workspace.dependencies]
 bevy = "0.17.0-rc.1"
+
+[dependencies]
+bevy = { workspace = true }
+states = { path = "crates/states" }
 
 # Enable a small amount of optimization in the dev profile.
 [profile.dev]

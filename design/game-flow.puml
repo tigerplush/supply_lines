@@ -1,0 +1,34 @@
+@startuml game flow
+
+
+[*] --> Splashscreen
+Splashscreen --> Preload
+Preload --> MainMenu
+
+MainMenu --> [*]
+MainMenu --> Settings
+Settings --> MainMenu
+MainMenu --> Credits
+Credits --> MainMenu
+MainMenu --> NewGame
+NewGame --> MainMenu
+MainMenu --> LoadGame
+LoadGame --> MainMenu
+
+NewGame --> WorldMap
+WorldMap --> MainCity
+MainCity --> WorldMap
+WorldMap --> EmbarkMenu
+EmbarkMenu --> WorldMap
+EmbarkMenu --> City
+City --> [*] : [save on exit]
+City --> WorldMap : [city done or abandoned]
+City --> MainMenu
+
+state c <<choice>>
+
+LoadGame --> c
+c --> City : [Last save in city]
+c --> WorldMap : [Last save not in city]
+
+@enduml
