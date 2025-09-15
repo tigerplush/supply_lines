@@ -7,7 +7,8 @@ pub enum AppState {
     Loading,
     MainMenu,
     NewGame,
-    Run,
+    LoadGame,
+    MainState,
 }
 
 #[derive(Default)]

@@ -14,6 +14,8 @@ bevy = "0.17.0-rc.1"
 
 [dependencies]
 bevy = { workspace = true }
+main_state = { path = "crates/main_state" }
+splashscreen = { path = "crates/splashscreen" }
 states = { path = "crates/states" }
 
 # Enable a small amount of optimization in the dev profile.

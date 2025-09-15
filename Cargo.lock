@@ -2888,6 +2888,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "main_state"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "states",
+]
+
+[[package]]
 name = "malloc_buf"
 version = "0.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4119,6 +4127,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "splashscreen"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "states",
+]
+
+[[package]]
 name = "stable_deref_trait"
 version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4154,6 +4170,8 @@ name = "supply_lines"
 version = "0.1.0"
 dependencies = [
  "bevy",
+ "main_state",
+ "splashscreen",
  "states",
 ]
 
