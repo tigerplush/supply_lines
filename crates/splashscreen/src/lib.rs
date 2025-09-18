@@ -31,7 +31,11 @@ fn setup(asset_server: Res<AssetServer>, mut commands: Commands) {
     commands.spawn((Camera2d, DespawnOnExit(AppState::Splashscreen)));
 }
 
-fn update(time: ResMut<Time>, mut next_state: ResMut<NextState<AppState>>, mut query: Single<&mut FadeTime>) {
+fn update(
+    time: ResMut<Time>,
+    mut next_state: ResMut<NextState<AppState>>,
+    mut query: Single<&mut FadeTime>,
+) {
     query.tick(time.delta());
     if query.is_finished() {
         next_state.set(AppState::MainState);
